@@ -10,7 +10,7 @@
     <div class="login-container">  
         <h2>Login</h2>  
         
-        <form>  
+        <form onsubmit="return login()">  
             <div class="input-group">  
                 <label for="username">Username</label>  
                 <input type="text" id="username" name="username" required>  
@@ -19,7 +19,7 @@
                 <label for="password">Password</label>  
                 <input type="password" id="password" name="password" required>  
             </div>  
-            <button onclick="login()" type="submit">Login</button>  
+            <button type="submit">Login</button>  
         </form>  
     </div>
     <script>
@@ -33,7 +33,9 @@
                 // <p> <a href="home.html">click here</a></p>
             } else{
                 alert("not possible");
-            }}
+            }
+        return false;
+    }
 
 
     </script>  
