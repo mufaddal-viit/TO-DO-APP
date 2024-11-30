@@ -3,30 +3,39 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Advanced To-Do List App</title>  
-    <link rel="stylesheet" href="style.css">  
-</head>  
+    <title>Login Page</title>  
+    <link rel="stylesheet" href="login_style.css">  
+</head>
 <body>  
-    <header>  
-        <h1>To-Do List</h1>  
-    </header>  
-    <main>  
-        <section id="form-section">  
-            <form id="task-form">  
-                <input type="text" id="new-task" placeholder="Enter new task" required>  
-                <button type="submit">Add Task</button>  
-            </form>  
-        </section>  
-        <section id="list-section">  
-            <ul id="task-list">  
-                <!-- <h1>h</h1> -->
-                <!-- List items will be dynamically added here -->  
-            </ul>  
-        </section>  
-    </main>  
-    <footer>  
-        <p>To-Do List App &copy; 2024</p>  
-    </footer>  
-    <script src="script.js"></script>  
+    <div class="login-container">  
+        <h2>Login</h2>  
+        
+        <form>  
+            <div class="input-group">  
+                <label for="username">Username</label>  
+                <input type="text" id="username" name="username" required>  
+            </div>  
+            <div class="input-group">  
+                <label for="password">Password</label>  
+                <input type="password" id="password" name="password" required>  
+            </div>  
+            <button onclick="login()" type="submit">Login</button>  
+        </form>  
+    </div>
+    <script>
+        function login(){
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if(username === "admin" && password === "1234MC"){
+                alert("here you go");
+                window.location.href = 'home.html';
+                // <p> <a href="home.html">click here</a></p>
+            } else{
+                alert("not possible");
+            }}
+
+
+    </script>  
 </body>  
 </html>  
